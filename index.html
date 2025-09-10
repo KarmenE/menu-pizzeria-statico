@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- collego il link del font esterno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+    <!-- https://www.w3schools.com/howto/howto_js_accordion.asp -->
+
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            let acc = document.getElementsByClassName("accordion");
+            let i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    let panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    
+    <div id="wrapper">
+
+        <header>
+            <div id="top">
+                <div class="icon">
+                    <a href="https://maps.app.goo.gl/sgPB9RZ3Fi36z4s58" target="blank"><img src="localita.png" alt="localita" width="32px" class="icon2"></a> 
+                    <p class="note">Località Castellaneta Marina (TA)</p>
+                </div>
+                <div class="icon">
+                    <a href="https://maps.app.goo.gl/nfD9k4146ozACE3b8" target="blank"><img src="indirizzo.png" alt="indirizzo" width="32px" class="icon2"></a>
+                    <p class="note">Via Aldrin, 20, 74011</p>
+                </div>
+                <div class="icon">
+                    <a href="Tel: 349 795 2307" target="_blank"><img src="cornetta.png" alt="cornetta"width="32px" class="icon2"></a>
+                    <p class="note">Prenota: +39 349 795 2307</p>            
+                </div>
+            </div>
+
+            <nav>
+                <img src="MenuLogo2.png" alt="logo" class="logo">
+            </nav>
+        </header>
+
+
+        <section>
+
+            <h1>Menu</h1>
+
+                <button class="accordion" type="button">ANTIPASTI</button>
+                    <div class="panel"><img src="antipasti.jpg" alt="antipasti"></div>
+
+                <button class="accordion" type="button">PIZZE</button>
+                    <div class="panel"><img src="pizze.jpg" alt="pizze"></div>
+
+                <button class="accordion" type="button">PIZZE GOURMET</button>
+                    <div class="panel"><img src="pizze gourmet.jpg" alt="pizze gourmet"></div>
+                    
+                <button class="accordion" type="button">BEVANDE</button>
+                    <div class="panel"><img src="bevande.jpg" alt="bevande"></div>
+
+
+        </section>
+
+
+        <footer>
+            <p class="note2"> © Copyright 2024 Ristorante Re Mida. Tutti i diritti riservati.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box; }
+
+body {
+    margin-left: 15px;
+    margin-right: 15px; }
+
+#top {
+     /*colore rosso del logo: #FB0708 */
+    background-color: #FB0708;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;    
+    margin-right: 40px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/* img{
+    filter: sepia(50%) saturate(100%) hue-rotate(90deg);} */
+    /* Per cambiare il colore delle icone: puoi regolare sepia, saturate e hue-rotate per ottenere il colore desiderato */
+
+/* .icon2{
+    -webkit-filter: invert(100%);
+    filter: invert(100%); }  */
+    /*per cambiare il colore delle icone*/
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;   }
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+h1{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 60px;
+    color: #FB0708;
+    font-weight: bold;
+}
+
+section{
+    margin-bottom: 15px;
+}
+
+button{
+    background-color: #FEECED;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    align-items: center;
+  }
+  
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover {
+    background-color: #F7646B;
+}
+  
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease-out; 
+    margin: 1px;
+}
+
+.panel img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #FB0708;
+}
+
+footer p{
+    margin-top: 10px;
+}
+
+/*VERSIONE MOBILE*/
+@media screen and (max-width: 767px) {
+
+    body{margin: 0;}
+    .top{position: fixed;}
+    .icon{margin: 0; margin-left: 40px;}
+    .note{display: none;}
+    h1{margin-top: 20px; font-size: 40px;}
+    .tab-content img {width: 100%;}
+    ul#myTab.nav.nav-tabs{justify-content: space-around;}
+    #myTabContent{width: auto}
+    .note2{text-align: center;}
+}
+
+/*VERSIONE MOBILE CON SCRITTA INDIRIZZO/LOCALITA/TEL VISIBILI*/
+/* @media screen and (max-width: 767px) {
+
+    body{margin: 0;}
+    #top {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    h1{margin-top: 20px;font-size: 40px;}
+    .tab-content img {width: 100%;}
+    ul#myTab.nav.nav-tabs{justify-content: space-around;}
+    #myTabContent{width: auto}
+    .note2{text-align: center;}
+} */
+
+/*VERSIONE TABLET*/
+@media screen and (min-width: 768px) and (max-width:1024px) { 
+    .tab-content img {width: 100%;}
+}
